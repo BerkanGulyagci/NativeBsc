@@ -1,16 +1,23 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# dependencies
+# -------------------------
+# 💥 Proje bağımlılıkları
 node_modules/
-
-# Expo
-.expo/
+jspm_packages/
+bower_components/
 dist/
+build/
 web-build/
-expo-env.d.ts
+android/
+ios/
 
-# Native
-.kotlin/
+# -------------------------
+# 💥 Expo / React Native
+.expo/
+.expo-shared/
+expo-env.d.ts
+app-example
+.metro-health-check*
 *.orig.*
 *.jks
 *.p8
@@ -18,22 +25,70 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
-# Metro
-.metro-health-check*
-
-# debug
+# -------------------------
+# 💥 Debug ve Log dosyaları
+*.log
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+lerna-debug.log*
+.pnpm-debug.log*
+report.[0-9]*.json
 
-# macOS
+# -------------------------
+# 💥 Sistem Dosyaları
 .DS_Store
 *.pem
+*.tgz
+*.seed
+*.pid
+*.pid.lock
+*.lock-wscript
 
-# local env files
-.env*.local
-
-# typescript
+# -------------------------
+# 💥 TypeScript
 *.tsbuildinfo
 
-app-example
+# -------------------------
+# 💥 Ortam dosyaları
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# -------------------------
+# 💥 Cache / Derleme / Test Çıktıları
+.cache
+.parcel-cache
+.next
+out
+.nuxt
+.vuepress/dist
+.temp
+.vitepress/dist
+.vitepress/cache
+.docusaurus
+.serverless/
+.fusebox/
+.dynamodb/
+.nyc_output
+coverage
+*.lcov
+lib-cov
+.npm
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_*/
+.node_repl_history
+
+# -------------------------
+# 💥 VS Code ve test araçları
+.vscode-test
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
